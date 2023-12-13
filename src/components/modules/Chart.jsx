@@ -16,7 +16,6 @@ import { convertData } from "../../helpers/convertData";
 import styles from "./Chart.module.css";
 
 const Chart = ({ chart, setChart }) => {
-  console.log(chart);
   const [type, setType] = useState("prices");
 
   const typeHandler = (event) => {
@@ -50,6 +49,11 @@ const Chart = ({ chart, setChart }) => {
             Total Volumes
           </button>
         </div>
+        <select className={styles.selectType} value={type} onChange={e => setType(e.target.value)}>
+          <option value="prices">Prices</option>
+          <option value="market_caps">Market Caps</option>
+          <option value="total_volumes">Total Volumes</option>
+        </select>
         <div className={styles.details}>
           <div>
             <p>Prices:</p>
@@ -72,8 +76,6 @@ const Chart = ({ chart, setChart }) => {
 export default Chart;
 
 const ChartComponent = ({ data, type }) => {
-  console.log(data);
-  console.log(type);
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart width={400} height={400} data={data}>
