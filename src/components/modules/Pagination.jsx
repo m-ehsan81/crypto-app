@@ -33,6 +33,7 @@ const Pagination = ({ page, setPage }) => {
                 )
             }
             <span>...</span>
+            <span className={styles.pageNumber}>{page}</span>
             <p className={page === 9 ? styles.selected : null}>9</p>
             <p className={page === 10 ? styles.selected : null}>10</p>
             <button

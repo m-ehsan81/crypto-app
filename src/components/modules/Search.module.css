@@ -63,3 +63,14 @@
     width: 25px;
     height: 25px;
 }
+
+@media (max-width: 555px) {
+    .searchBox input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .searchBox select {
+        margin-left: 0;
+    }
+}

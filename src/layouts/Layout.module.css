@@ -22,3 +22,14 @@
   margin-top: 80px;
   border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+  
+  .header p{
+    display: none;
+  }
+  
+}
